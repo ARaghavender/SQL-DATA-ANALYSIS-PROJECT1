@@ -37,7 +37,7 @@ ON e.emp_no = dm.emp_no;
 
 
 -- 5. Employee Count by Department
--- 
+-- Question: Write a query to count the number of employees in each department. Include department number, department name, and employee count.
 
 SELECT d.dept_no,dept_name,count(de.emp_no) as emp_count FROM departments as d 
 JOIN dept_emp as de 
@@ -87,4 +87,4 @@ SELECT emp_no,first_name,last_name,
 timestampdiff(YEAR,hire_date,CUrdate()) as year_served
  FROM employees
  ORDER By year_served desc
- LIMIT 10
+ LIMIT 10;
